@@ -4,6 +4,8 @@
 
 `lead_id` would be the id of the lead which you want to convert to contact. It can be found from lead details page url.
 
+#### Sample example request: `https://api.kylas.io/v1/leads/90010/convert`
+
 ### Request Type: `POST`
 ### Headers required: `api-key: <Users_api_key>`
 

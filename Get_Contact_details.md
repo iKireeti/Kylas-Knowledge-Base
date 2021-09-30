@@ -4,6 +4,8 @@
 
 `contact_id` would be the id of the contact whose details are to be fetched. It can be found from Contact details page url.
 
+#### Sample example request: `https://api.kylas.io/v1/contacts/90010`
+
 ### Request Type: `GET`
 ### Headers required: `api-key: <Users_api_key>`
 

@@ -4,6 +4,8 @@
 
 `deal_id` would be the id of the deal whose details are to be fetched. It can be found from Deal details page url.
 
+#### Sample example request: `https://api.kylas.io/v1/deals/90010`
+
 ### Request Type: `GET`
 ### Headers required: `api-key: <Users_api_key>`
 
