@@ -1,4 +1,4 @@
-## Basic Lead request with Default fields available in Kylas APP
+## Basic Deal request to create Deal with Default fields available in Kylas APP
 
 ### Request URl: `https://api.kylas.io/v1/deals/`
 ### Request Type: `POST`

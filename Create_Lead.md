@@ -1,8 +1,8 @@
-## Basic Lead request with Default fields available in Kylas APP
+## POST Lead request to create lead with Default fields available in Kylas APP
 
 ### Request URl: `https://api.kylas.io/v1/leads/`
-### Request Type: POST
-### Headers required: api-key: <Users_api_key>
+### Request Type: `POST`
+### Headers required: `api-key: <Users_api_key>`
 
 ### Request body in json format:
 
