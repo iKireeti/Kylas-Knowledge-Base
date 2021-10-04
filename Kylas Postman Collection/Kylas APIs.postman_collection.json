@@ -1,0 +1,1673 @@
+{
+	"info": {
+		"_postman_id": "6a9df2a6-1a80-450b-a1c6-bba832cd0c1c",
+		"name": "Kylas Sales APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Lead APIs",
+			"item": [
+				{
+					"name": "Create Lead",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "<api_key>",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \n    \"firstName\": \"Lead's firstName\",\n    \"lastName\": \"Master\",\n    \"phoneNumbers\": [\n        {\n            \"type\": \"MOBILE\",\n            \"code\": \"IN\",\n            \"value\": \"9877878767\",\n            \"dialCode\": \"+91\",\n            \"primary\": true\n        },\n        {\n            \"type\": \"MOBILE\",\n            \"code\": \"IN\",\n            \"value\": \"9877888767\",\n            \"dialCode\": \"+91\",\n            \"primary\": false\n        }\n    ],    \n    \"salutation\": null,\n    \"emails\": [\n        {\n            \"type\": \"OFFICE\",\n            \"value\": \"officeEmail@gmail.com\",\n            \"primary\": true\n        },\n        {\n            \"type\": \"OFFICE\",\n            \"value\": \"officeEmail2@gmail.com\",\n            \"primary\": false\n        },\n        {\n            \"type\": \"OFFICE\",\n            \"value\": \"officeEmail3@gmail.com\",\n            \"primary\": false\n        }\n    ],\n    \"timezone\": \"Etc/GMT+12\",\n    \"city\": \"Navi Mumbai\",\n    \"state\": \"Maharashtra\",\n    \"zipcode\": \"400605\",\n    \"country\": \"IN\",\n    \"department\": \"Technology\",\n    \"dnd\": true,\n    \"facebook\": \"https://www.facebook.com\",\n    \"twitter\": \"https://www.facebook.com\",\n    \"linkedIn\": \"https://www.facebook.com\",\n    \"address\": \"112, Millenium Businesspark\",\n    \"companyName\": \"doodle\",\n    \"companyAddress\": \"Translab\",\n    \"companyCity\": \"Mumbai\",\n    \"companyState\": \"Maharashtra\",\n    \"companyZipcode\": \"400506\",\n    \"companyCountry\": \"IN\",\n    \"companyEmployees\": null,\n    \"companyAnnualRevenue\": 5555555,\n    \"companyWebsite\": \"https://www.ggbuhiuj.com\",\n    \"companyPhones\": [\n        {\n            \"type\": \"MOBILE\",\n            \"code\": \"IN\",\n            \"value\": \"9877878767\",\n            \"dialCode\": \"+91\",\n            \"primary\": true\n        }\n    ],\n    \"companyIndustry\": \"BIOTECHNOLOGY\",\n    \"companyBusinessType\": \"competitor\",\n    \"requirementName\": \"Tera Byte \",\n    \"requirementCurrency\": \"GBP\",\n    \"requirementBudget\": 55555,\n    \"products\": [],\n    \"designation\": \"CEO\",\n    \"campaign\": null,\n    \"source\": null    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.kylas.io/v1/leads/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kylas",
+								"io"
+							],
+							"path": [
+								"v1",
+								"leads",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Lead",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "api-key",
+								"type": "text",
+								"value": "<api_key>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \n    \"firstName\": \"Rohit sharma\",\n    \"lastName\": \"Chawda\",\n    \"phoneNumbers\": [\n        {\n            \"type\": \"MOBILE\",\n            \"code\": \"IN\",\n            \"value\": \"7447631718\",\n            \"dialCode\": \"+91\",\n            \"primary\": true\n        },\n        {\n            \"type\": \"MOBILE\",\n            \"code\": \"IN\",\n            \"value\": \"9888787767\",\n            \"dialCode\": \"+91\",\n            \"primary\": false\n        }\n    ],\n    \"salutation\": null,\n    \"tags\": null,\n    \"photoUrls\": null,\n    \"emails\": [\n        {\n            \"type\": \"OFFICE\",\n            \"value\": \"akshaygunshetti941998@gmail.com\",\n            \"primary\": true\n        },\n        {\n            \"type\": \"OFFICE\",\n            \"value\": \"abc@gmail.com\",\n            \"primary\": false\n        }\n    ],\n            \n    \"timezone\": \"Pacific/Midway\",\n    \"city\": \"Pune\",\n    \"state\": \"Maharashtra\",\n    \"zipcode\": \"411046\",\n    \"country\": \"AX\",\n    \"department\": \"Technology\",\n    \"dnd\": null,\n    \"facebook\": \"https://tye.com\",\n    \"twitter\": \"https://tye.com\",\n    \"linkedIn\": \"https://tye.com\",\n    \"address\": \"Flat no.5,SR NO.32/12,Vrindavan Park,Near Flying Bird School,Opposite to Shani Maruti Temple,Ambegaon(BK)\",\n    \"companyName\": \"Pune Institute Of Computer Technology,Pune\",\n    \"companyAddress\": \"doodle\",\n    \"companyCity\": \"Thane\",\n    \"companyState\": \"Maharashtra\",\n    \"companyZipcode\": \"400605\",\n    \"companyCountry\": \"AL\",\n    \"companyEmployees\": null,\n    \"companyAnnualRevenue\": 7888889,\n    \"companyWebsite\": \"https://tye.com\",\n    \"companyPhones\": [\n        {\n            \"type\": \"MOBILE\",\n            \"code\": \"IN\",\n            \"value\": \"8876778776\",\n            \"dialCode\": \"+91\",\n            \"primary\": true\n        },\n        {\n            \"type\": \"MOBILE\",\n            \"code\": \"IN\",\n            \"value\": \"7788788988\",\n            \"dialCode\": \"+91\",\n            \"primary\": false\n        }\n    ],\n    \"companyIndustry\": \"ALTERNATIVE_DISPUTE_RESOLUTION\",\n    \"companyBusinessType\": \"competitor\",\n    \"requirementName\": \"Furnishment\",\n    \"requirementCurrency\": null,\n    \"requirementBudget\": 88987,\n    \"expectedClosureOn\": null,    \n    \n    \"designation\": \"HOD\",\n    \"campaign\": null,\n    \"source\": null,\n    \"actualClosureDate\": null,\n    \"conversionDetails\": [],\n    \"customFieldValues\": {        \n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.kylas.io/v1/leads/<lead_id>",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kylas",
+								"io"
+							],
+							"path": [
+								"v1",
+								"leads",
+								"<lead_id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_Lead",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "api-key",
+								"type": "text",
+								"value": "<api_key>"
+							}
+						],
+						"url": {
+							"raw": "https://api.kylas.io/v1/leads/<lead_id>",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kylas",
+								"io"
+							],
+							"path": [
+								"v1",
+								"leads",
+								"<lead_id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Import Leads",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "<api_key>",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"lead\": {\n    \"firstName\": \"tony\",\n    \"email\": [\n      {\n        \"type\": \"OFFICE\",\n        \"value\": \"ton@stark.com\"\n      }\n    ],\n    \"pipeline\": null\n  },\n  \"importStrategy\": {\n    \"type\": \"NONE\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.kylas.io/v1/leads/import",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kylas",
+								"io"
+							],
+							"path": [
+								"v1",
+								"leads",
+								"import"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reassign_Lead",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "api-key",
+								"type": "text",
+								"value": "<api_key>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ownerId\": <owner_id>\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.kylas.io/v1/leads/<lead_id>/owner",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kylas",
+								"io"
+							],
+							"path": [
+								"v1",
+								"leads",
+								"<lead_id>",
+								"owner"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Convert_Lead to Contact",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"type": "text",
+								"value": "<api_key>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"contact\": {\n        \"mode\": \"CREATE\",\n        \"details\": {\n            \"firstName\": \"fnamechanged1632978297158\",\n            \"lastName\": \"lnamechanged1632978297158\",\n            \"dnd\": true,\n            \"timezone\": \"Asia/Calcutta\",\n            \"address\": \"sample address\",\n            \"city\": \"Mumbai\",\n            \"state\": \"Maharashtra\",\n            \"zipcode\": \"400102\",\n            \"country\": \"IN\",\n            \"facebook\": \"https://www.fb.com\",\n            \"twitter\": \"https://www.ty.com\",\n            \"department\": \"Engineering\",\n            \"designation\": \"Master\",\n            \"linkedin\": \"https://www.li.com\"\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.kylas.io/v1/leads/<lead_id>/convert",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kylas",
+								"io"
+							],
+							"path": [
+								"v1",
+								"leads",
+								"<lead_id>",
+								"convert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Convert_Lead to Company",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"type": "text",
+								"value": "<api_key>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"company\": {\n        \"mode\": \"CREATE\",\n        \"details\": {\n            \"annualRevenue\": {\n                \"currencyId\": 431\n            },\n            \"name\": \"Lead convert to New Company\"\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.kylas.io/v1/leads/<lead_id>/convert",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kylas",
+								"io"
+							],
+							"path": [
+								"v1",
+								"leads",
+								"<lead_id>",
+								"convert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create_note_on_lead",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"type": "text",
+								"value": "<api_key>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"sourceEntity\": {\n\t\t\"description\": \"lead is interested in product. Want to know more about it.\"\n\t},\n\t\"targetEntityId\": <lead_id>,\n\t\"targetEntityType\": \"LEAD\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.kylas.io/v1/notes/relation",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kylas",
+								"io"
+							],
+							"path": [
+								"v1",
+								"notes",
+								"relation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_notes_on_lead",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "api-key",
+								"type": "text",
+								"value": "<api_key>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.kylas.io/v1/notes/<note_id>",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kylas",
+								"io"
+							],
+							"path": [
+								"v1",
+								"notes",
+								"<note_id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create_task_on_lead",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"type": "text",
+								"value": "<api_key>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": <id_of_type_of_task>,\n    \"status\": <id_of_status_of_task>,\n    \"reminder\": \"ONE_HOUR\",\n    \"assignedTo\": <assigned_to_user_id>,\n    \"relation\": [\n        {\n            \"targetEntityId\": <lead_id>,\n            \"targetEntityType\": \"LEAD\"\n        }\n    ],\n    \"dueDate\": \"2021-10-30T11:00:00.000Z\",\n    \"name\": \"task on lead\",\n    \"customFieldValues\": {}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.kylas.io/v1/tasks/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kylas",
+								"io"
+							],
+							"path": [
+								"v1",
+								"tasks",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_task_on_lead",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "api-key",
+								"type": "text",
+								"value": "<api_key>"
+							}
+						],
+						"url": {
+							"raw": "https://api.kylas.io/v1/tasks/<task_id>",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kylas",
+								"io"
+							],
+							"path": [
+								"v1",
+								"tasks",
+								"<task_id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create_meeting_on_lead",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"set task_id globally\",function(){",
+									"    var jsonData = pm.response.json();        ",
+									"    postman.setGlobalVariable('meeting_id', jsonData.id);    ",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"type": "text",
+								"value": "<api_key>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"anoptheerrr\",\n    \"allDay\": false,\n    \"timezone\": {\n        \"id\": 372,\n        \"name\": \"Asia/Calcutta\"\n    },\n    \"relatedTo\": [\n        {\n            \"id\": <lead_id>,            \n            \"entity\": \"lead\"\n        }\n    ],\n    \"participants\": [\n        {\n            \"id\": <lead_id>,\n            \"entity\": \"lead\"          \n        }\n    ],\n    \"from\": \"2022-10-18T17:00:00.000Z\",\n    \"to\": \"2022-10-18T17:30:00.000Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.kylas.io/v1/meetings",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kylas",
+								"io"
+							],
+							"path": [
+								"v1",
+								"meetings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_meeting_on_lead",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "api-key",
+								"type": "text",
+								"value": "<api_key>"
+							}
+						],
+						"url": {
+							"raw": "https://api.kylas.io/v1/meetings/<meeting_id>",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kylas",
+								"io"
+							],
+							"path": [
+								"v1",
+								"meetings",
+								"<meeting_id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send_email_on_lead",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"type": "text",
+								"value": "<api_key>"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "subject",
+									"value": "hey any, update",
+									"type": "text"
+								},
+								{
+									"key": "relatedTo",
+									"value": "{\"id\":<lead_id>,\"entity\":\"lead\",\"name\":\"Edit sharma 1629311016387\",\"email\":\"akshaygunshetti941998@gmail.com\"}",
+									"type": "text"
+								},
+								{
+									"key": "to",
+									"value": "[{\"id\":\"<lead_id>\",\"name\":\"Edit sharma 1629311016387\",\"entity\":\"lead\",\"email\":\"akshaygunshetti941998@gmail.com\"},{\"id\":\"<lead_id>\",\"name\":\"Edit sharma 1629311016387\",\"entity\":\"lead\",\"email\":\"abc@gmail.com\"}]",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.kylas.io/v1/emails",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kylas",
+								"io"
+							],
+							"path": [
+								"v1",
+								"emails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Lead fields",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "<api_key>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.kylas.io/v1/ui/layouts/CREATE/LEAD",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kylas",
+								"io"
+							],
+							"path": [
+								"v1",
+								"ui",
+								"layouts",
+								"CREATE",
+								"LEAD"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Lead Smartlist filters",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "<api_key>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.kylas.io/v1/search-lists/lead?size=100",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kylas",
+								"io"
+							],
+							"path": [
+								"v1",
+								"search-lists",
+								"lead"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Deal APIs",
+			"item": [
+				{
+					"name": "Create Deal",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"type": "text",
+								"value": "<api_key>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ownedBy\": {\n        \"id\": <owner_id>        \n    },\n    \"name\": \"deal\",\n    \"estimatedValue\": {\n        \"currencyId\": 431,\n        \"value\": 1000\n    },\n    \"associatedContacts\": [\n        {\n            \"id\": <contact_id_which_is_to_be_associated>            \n        }\n    ],\n    \"customFieldValues\": {}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.kylas.io/v1/deals",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kylas",
+								"io"
+							],
+							"path": [
+								"v1",
+								"deals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Deal",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "api-key",
+								"type": "text",
+								"value": "<api_key>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Test Api\",\n    \"estimatedValue\": {\n        \"currencyId\": 431,\n        \"value\": 4500\n    },\n    \"actualValue\": null,\n    \"estimatedClosureOn\": \"2020-11-05T06:30:00Z\",\n    \"pipeline\": {\n        \"id\": <pipeline_id>,\n        \"name\": \"Default Deal Pipeline\",\n        \"stage\": {\n            \"id\": <stage_id>,\n            \"name\": \"Closed Lost\"\n        }\n    },\n    \"forecastingType\": \"CLOSED_LOST\",\n    \"associatedContacts\": [\n        {\n            \"id\": <associated_contact_id>,\n            \"name\": \"test testy\"\n        }\n    ],\n    \"product\": {\n        \"id\": <product_id>,\n        \"name\": \"Test Product\"\n    },\n    \"company\": {\n        \"id\": <company_id>,\n        \"name\": \"abcd\"\n    },\n    \"ownedBy\": {\n        \"id\": <owner_id>,\n        \"name\": \"Daaji\"\n    },\n    \"createdBy\": {\n        \"id\": <owner_id>,\n        \"name\": \"Daaji\"\n    },\n    \"updatedBy\": {\n        \"id\": <updated_by_id>,\n        \"name\": \"Daaji\"\n    },\n    \"createdAt\": \"2020-11-25T08:41:42Z\",\n    \"updatedAt\": \"2021-04-01T12:39:34Z\",\n    \"actualClosureDate\": \"2021-05-03T23:52:41Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.kylas.io/v1/deals/<deal_id>",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kylas",
+								"io"
+							],
+							"path": [
+								"v1",
+								"deals",
+								"<deal_id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Deal details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "<api-key>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.kylas.io/v1/deals/<deal_id>",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kylas",
+								"io"
+							],
+							"path": [
+								"v1",
+								"deals",
+								"<deal_id>"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contact APIs",
+			"item": [
+				{
+					"name": "Create Contact",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"type": "text",
+								"value": "<api-key>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"FirstName of contact\",\n    \"lastName\": \"Pandit\",\n    \"emails\": [\n        {\n            \"type\": \"OFFICE\",\n            \"value\": \"officeEmail@gmail.com\",\n            \"primary\": true\n        }\n    ],\n    \"phoneNumbers\": [\n        {\n            \"type\": \"MOBILE\",\n            \"code\": \"IN\",\n            \"dialCode\": \"+91\",\n            \"value\": \"8888888888\",\n            \"primary\": true\n        }\n    ],\n    \"timezone\": \"Asia/Calcutta\",\n    \"address\": \"601, Sarvodaya building, Behrambagh, Jogeshwari West\",\n    \"city\": \"Mumbai\",\n    \"state\": \"Maharashtra\",\n    \"zipcode\": \"400102\",\n    \"country\": \"IN\",\n    \"facebook\": \"https://www.fb.com\",\n    \"twitter\": \"https://www.ty.com\",\n    \"linkedin\": \"https://www.linkedin.com\",\n    \"company\": null,\n    \"department\": \"Management\",\n    \"designation\": \"Analyst\",\n    \"salutation\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.kylas.io/v1/contacts",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kylas",
+								"io"
+							],
+							"path": [
+								"v1",
+								"contacts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get  Contact details",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"type": "text",
+								"value": "<api-key>"
+							}
+						],
+						"url": {
+							"raw": "https://api.kylas.io/v1/contacts/<contact_id>",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kylas",
+								"io"
+							],
+							"path": [
+								"v1",
+								"contacts",
+								"<contact_id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Contact",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "api-key",
+								"type": "text",
+								"value": "<api-key>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.kylas.io/v1/contacts/<contact_id>",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kylas",
+								"io"
+							],
+							"path": [
+								"v1",
+								"contacts",
+								"<contact_id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Contact",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "api-key",
+								"type": "text",
+								"value": "<api-key>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \n  \"firstName\": \"Testing contact\",\n  \"lastName\": \"API\",\n  \"phoneNumbers\": [\n    {\n      \"type\": \"MOBILE\",\n      \"code\": \"IN\",\n      \"value\": \"09877878767\",\n      \"dialCode\": \"+91\",\n      \"primary\": true\n    }\n  ],\n  \"emails\": [\n    {\n      \"type\": \"OFFICE\",\n      \"value\": \"kylastesing25@gmail.com\",\n      \"primary\": true\n    }\n  ],\n  \"customFieldValues\": {\n    \"testingCustom\": true\n  },\n  \"dnd\": true,\n  \"timezone\": \"Pacific/Midway\",\n  \"address\": \"Alphanta Spicexss\",\n  \"city\": \"Mumbai\",\n  \"state\": \"Maharashtra\",\n  \"zipcode\": \"400605\",\n  \"country\": \"AS\",\n  \"facebook\": \"https://selldo.atlassian.net/browse/SD-3162\",\n  \"twitter\": \"https://selldo.atlassian.net/browse/SD-3162\",\n  \"linkedin\": \"https://selldo.atlassian.net/browse/SD-3162\",\n  \"company\": <company_id>,\n  \"department\": \"qedcewcf\",\n  \"designation\": \"asdcwsc\",\n  \"stakeholder\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.kylas.io/v1/contacts/<contact_id>",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kylas",
+								"io"
+							],
+							"path": [
+								"v1",
+								"contacts",
+								"<contact_id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Contacts fields",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "<api-key>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.kylas.io/v1/ui/layouts/CREATE/LEAD",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kylas",
+								"io"
+							],
+							"path": [
+								"v1",
+								"ui",
+								"layouts",
+								"CREATE",
+								"LEAD"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Company APIs",
+			"item": [
+				{
+					"name": "Create_company",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "<api-key>",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Shakti Pvt ltd\",\n    \"numberOfEmployees\": {\n        \"id\": <companies_number_id>,\n        \"name\": \"1-4\",\n        \"systemDefault\": true\n    },\n    \"annualRevenue\": {\n        \"currencyId\": 431,\n        \"value\": 10000000\n    },\n    \"website\": \"https://www.shakticorp.com\",\n    \"industry\": {\n        \"id\": <industry_id>,\n        \"name\": \"Computer Software\",\n        \"systemDefault\": true\n    },\n    \"businessType\": {\n        \"id\": <businessType_id>,\n        \"name\": \"Analyst\",\n        \"systemDefault\": true\n    },\n    \"emails\": [\n        {\n            \"type\": \"OFFICE\",\n            \"value\": \"shakti@mailinator.com\",\n            \"primary\": true\n        }\n    ],\n    \"phoneNumbers\": [\n        {\n            \"type\": \"MOBILE\",\n            \"code\": \"IN\",\n            \"dialCode\": \"+91\",\n            \"value\": \"9999999999\",\n            \"primary\": true\n        }\n    ],\n    \"timezone\": {\n        \"id\": 372,\n        \"name\": \"(GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi / Sri Jayawardenapura\",\n        \"systemDefault\": true\n    },\n    \"address\": \"601, Sarvodaya building, Behrambagh, Jogeshwari West\",\n    \"city\": \"Mumbai\",\n    \"state\": \"Maharashtra\",\n    \"zipcode\": \"400102\",\n    \"country\": {\n        \"id\": 175,\n        \"name\": \"India\",\n        \"systemDefault\": true\n    },\n    \"facebook\": \"https://www.fb,com\",\n    \"twitter\": \"https://www.ty,com\",\n    \"linkedIn\": \"https://www.li,com\",\n    \"customFieldValues\": {}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.kylas.io/v1/companies/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kylas",
+								"io"
+							],
+							"path": [
+								"v1",
+								"companies",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Company",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "<api-key>",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Acmeh Corp\",\n  \"numberOfEmployees\": {\n    \"id\": <numberOfEmployees_id>,\n    \"name\": \"50-99\"\n  },\n  \"annualRevenue\": {\n    \"currencyId\": 431,\n    \"value\": 6554440000\n  },\n  \"website\": \"https://compweb.com/\",\n  \"industry\": {\n    \"id\": <industry_id>,\n    \"name\": \"Information Technology and Services\"\n  },\n  \"businessType\": {\n    \"id\": <businessType_id>,\n    \"name\": \"Integrator\"\n  },\n  \"emails\": [\n    {\n      \"type\": \"OFFICE\",\n      \"value\": \"xyz@gmail.com\",\n      \"primary\": true\n    },\n    {\n      \"type\": \"OFFICE\",\n      \"value\": \"erp@gmail.com\",\n      \"primary\": false\n    }\n  ],\n  \"phoneNumbers\": [\n    {\n      \"type\": \"MOBILE\",\n      \"code\": \"IN\",\n      \"dialCode\": \"+91\",\n      \"value\": \"9877878767\",\n      \"primary\": true\n    },\n    {\n      \"type\": \"MOBILE\",\n      \"code\": \"IN\",\n      \"dialCode\": \"+91\",\n      \"value\": \"9877868767\",\n      \"primary\": false\n    }\n  ],\n  \"timezone\": {\n    \"id\": 372,\n    \"name\": \"(GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi / Sri Jayawardenapura\"\n  },\n  \"dnd\": true,\n  \"address\": \"Twin Towers\",\n  \"city\": \"Thane\",\n  \"country\": {\n    \"id\": 175,\n    \"name\": \"India\"\n  },\n  \"state\": \"Maharashtra\",\n  \"zipcode\": \"400605\",\n  \"facebook\": \"https://compweb.com/\",\n  \"twitter\": \"https://compweb.com/\",\n  \"linkedIn\": \"https://compweb.com/\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.kylas.io/v1/companies/<company_id>",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kylas",
+								"io"
+							],
+							"path": [
+								"v1",
+								"companies",
+								"<company_id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Company",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "<api-key>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.kylas.io/v1/companies/<company_id>",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kylas",
+								"io"
+							],
+							"path": [
+								"v1",
+								"companies",
+								"<company_id>"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products and Services",
+			"item": [
+				{
+					"name": "Create Product",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "<api-key>",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"isActive\": true,\n\t\"name\": \"<product_name>\",\n\t\"price\": {\n\t\t\"currencyId\": 431,\n\t\t\"value\": <price>\n\t},\n\t\"customFieldValues\": {}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.kylas.io/v1/products",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kylas",
+								"io"
+							],
+							"path": [
+								"v1",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deactivate Product",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "<api-key>",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": <product_id>,\n\t\"name\": \"Product_1632404913779\",\n\t\"price\": {\n\t\t\"currencyId\": 431,\n\t\t\"value\": 1632404913779\n\t},\n\t\"description\": \"change below value to false to deactivate and true to Activate\",\n\t\"isActive\": false\t\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.kylas.io/v1/products/<product_id>",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kylas",
+								"io"
+							],
+							"path": [
+								"v1",
+								"products",
+								"<product_id>"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Task APIs",
+			"item": [
+				{
+					"name": "Create Task",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "<api-key>",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"type\": <task_type_id>,\n\t\"status\": <task_status_id>,\n\t\"reminder\": \"ONE_HOUR\",\n\t\"assignedTo\": <owner_id>,\n\t\"dueDate\": \"2022-12-24T14:00:00.000Z\",\n\t\"name\": \"task name\",\n\t\"customFieldValues\": {}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.kylas.io/v1/tasks/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kylas",
+								"io"
+							],
+							"path": [
+								"v1",
+								"tasks",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Task",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "<api-key>",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Edit_Task_1632377320933\",\n    \"dueDate\": \"2022-11-24T14:00:00.000+0000\",\n    \"type\": <task_type_id>,\n    \"status\":<task_status_id>,\n    \"priority\": <task_priority_id>,\n    \"reminder\": \"THIRTY_MINUTES\",\n    \"assignedTo\":<owner_id>\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.kylas.io/v1/tasks/<task_id>",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kylas",
+								"io"
+							],
+							"path": [
+								"v1",
+								"tasks",
+								"<task_id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Task fields",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "<api-key>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.kylas.io/v1/ui/layouts/CREATE/TASK",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kylas",
+								"io"
+							],
+							"path": [
+								"v1",
+								"ui",
+								"layouts",
+								"CREATE",
+								"TASK"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Task_Status_priority_type_ids",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "<api-key>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.kylas.io/v1/ui/layouts/list/task",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kylas",
+								"io"
+							],
+							"path": [
+								"v1",
+								"ui",
+								"layouts",
+								"list",
+								"task"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Task Details",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "<api-key>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.kylas.io/v1/tasks/<task_id>",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kylas",
+								"io"
+							],
+							"path": [
+								"v1",
+								"tasks",
+								"<task_id>"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Account Related APIs",
+			"item": [
+				{
+					"name": "Get_access_token",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"<user email address whose access token is to be fetched>\",\n    \"password\": \"<password>\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.kylas.io/v1/users/login?view=access-token",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kylas",
+								"io"
+							],
+							"path": [
+								"v1",
+								"users",
+								"login"
+							],
+							"query": [
+								{
+									"key": "view",
+									"value": "access-token"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Api-Key from user creds",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "<bearer_token>",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.kylas.io/v1/api-keys/kylas-app-key",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kylas",
+								"io"
+							],
+							"path": [
+								"v1",
+								"api-keys",
+								"kylas-app-key"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Related APIs",
+			"item": [
+				{
+					"name": "Invite_User or Create_New_User",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "<api-key>",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"currency\": \"INR\",\n\t\"timezone\": \"Asia/Calcutta\",\n\t\"dateFormat\": \"MMM D, YYYY [at] h:mm a\",\n\t\"language\": \"EN\",\n\t\"phoneNumbers\": [{\n\t\t\"type\": \"MOBILE\",\n\t\t\"code\": \"IN\",\n\t\t\"dialCode\": \"+91\",\n\t\t\"value\": \"9999999999\",\n\t\t\"primary\": true\n\t}],\n\t\"firstName\": \"user_from_tenant\",\n\t\"lastName\": \"Normal user\",\n\t\"profileId\": <profile_id>,\n\t\"email\": \"New_user_email\",\n\t\"customFieldValues\": {}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.kylas.io/v1/users/invite",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kylas",
+								"io"
+							],
+							"path": [
+								"v1",
+								"users",
+								"invite"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
