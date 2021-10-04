@@ -2,7 +2,14 @@
 
 ### Request URl: `https://api.kylas.io/v1/leads/`
 ### Request Type: `POST`
-### Headers required: `api-key: <Users_api_key>`
+### Headers required: `api-key: <User's_api_key>`
+
+### Sample headers JSON below:
+
+`{
+	'Content-Type': 'application/json',
+	'api-key': <User's_api_key>
+}`
 
 ### Request body in json format:
 
