@@ -13,18 +13,9 @@
 
 ### Request body in json format:
 
-```{
-	"salutation": 844,
+```{	
 	"firstName": "Rohit",
-	"lastName": "Sharma",
-	"pipeline": {
-		"id": 11,
-		"name": "Default Lead Pipeline",
-		"stage": {
-			"id": 41,
-			"name": "Open"
-		}
-	},
+	"lastName": "Sharma",	
 	"emails": [{
 		"type": "OFFICE",
 		"value": "rohit.sharma@gmail.com",
@@ -51,7 +42,6 @@
 	"designation": "Manager",
 	"companyIndustry": "SPORTS",
 	"companyBusinessType": "partner",
-	"companyEmployees": 10996,
 	"companyAnnualRevenue": 10000000,
 	"companyWebsite": "https://www.mi.com",
 	"companyCity": "Mumbai",
@@ -59,14 +49,8 @@
 	"companyZipcode": "400102",
 	"companyAddress": "MI Pvt ltd",
 	"companyCountry": "IN",
-	"requirementName": "2 bhk",
-	"products": [{
-		"id": 890,
-		"name": "Double Bed room Apartments"
-	}],
+	"requirementName": "2 bhk",	
 	"requirementCurrency": "INR",
 	"requirementBudget": 2500000,
-	"campaign": 847,
-	"source": 848,
 	"customFieldValues": {}
 } 
